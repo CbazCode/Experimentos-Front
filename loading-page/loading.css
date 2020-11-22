@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #262626;
+    font-family: Lato, sans-serif;
+    
+}
+
+/*Se creo este container porque
+el display flex no funciona en el .loader
+debido a que el .loading_2 tiene width del 100% e impide el uso del justify-content: center*/
+.container-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loader{
+    width: 500px;
+    position: relative;  
+}
+
+.loading_1{
+
+    border: 2px solid #69d2e7;
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+
+}
+
+.loading_1:before{
+    
+    content: "";
+    animation: load 3s ease-in-out infinite;
+    background-color: #69d2e7;
+    border-radius: 20px;
+    box-shadow: 10px 0px 15px 0px  #69d2e7;
+    display: block;
+    height: 100%;
+    width: 0px;
+}
+
+.loading_2{
+    color:  #69d2e7;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+@keyframes load{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}

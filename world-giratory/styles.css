@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-size: 30px;
+    font-family: Cascadia Code PL;
+}
+
+p{
+    text-align: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: rgb(10, 38, 75);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nubes{
+    position: relative;
+    height: 360px;
+    width: 360px;
+    z-index: 10;
+}
+
+.mundo{
+    position: absolute;
+    height: 360px;
+    width: 360px;
+    background-color: rgb(166, 246, 236);
+    background-image: url(img/Imagen1.png);
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: -30px -20px 0 0 rgba(0, 0, 0, .1) inset,
+                 -90px -40px 0 0 rgba(0, 0, 0, .1) inset,
+                 5px 5px 0 0 rgba(255, 255, 255, .2) inset;
+
+    animation: tierra-girando 5s linear infinite;
+}
+
+@keyframes tierra-girando{
+    from{
+        background-position: left center;
+    }
+    to{
+        background-position: 539px center;
+        
+    }
+}
+
+
+

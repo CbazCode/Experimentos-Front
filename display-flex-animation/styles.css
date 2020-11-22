@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.contenedor{
+    background-color: green;
+    width: 100%;
+    display: flex;
+    
+}
+
+.rojo{
+    background-color: red;
+    width: 30%;
+    margin:10px 0px;
+    animation: slideMenuOn 1.5s ease;
+    transition: animation;
+    /*transition: width 1.5s ease;*/
+    
+
+}
+
+.azul{
+    background-color: blue;
+    width: 70%;
+    margin:10px 0px;
+}
+
+.amarillo{
+    background-color: yellow;
+    width: 100%;
+    margin:10px 0px;
+
+}
+
+.naranja{
+    background-color: orange;
+    width: 100%;
+    margin:10px 0px;
+    display: flex;
+
+}
+
+.negro{
+    background-color: black;
+    width: 50%;
+    margin:10px 0px;
+
+}
+
+.celeste{
+    background-color: lightblue;
+
+    width: 50%;
+    margin:10px 0px;
+
+}
+.texto{
+    color:white;
+}
+
+
+@media only screen and (max-width:890px){
+
+
+    .rojo{
+        animation: slideMenuOff 1.5s ease;
+        display:none;
+        width: 0px;
+    }
+    .azul{
+        width: 100%;
+    }
+    
+   
+    
+}
+
+@keyframes slideMenuOn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
+@keyframes slideMenuOff {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
