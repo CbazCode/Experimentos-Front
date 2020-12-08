@@ -183,6 +183,14 @@ const moverBackground = () => {
     divAhorcado.style.backgroundPosition = `-${199*contadorFallos}px 0`
 }
 
+const mostrarPalabra = () => {
+    const vectorL = document.querySelectorAll('.letra');
+    for(i = 0; i < palabraEnJuego.length ; i++){        
+    
+           vectorL[i].classList.add('activate');
+        
+    }
+}
 
 let btnSubmit = document.querySelector('.btn-submit');
 let btnReinicio = document.querySelector('.reinicio');
@@ -199,6 +207,7 @@ const verificarJuegoPerdido = () => {
         btnSubmit.style.display = 'none';
         btnReinicio.style.display = 'inline';
         valueiInput.setAttribute('disabled','');
+        mostrarPalabra();
     }
 }
 
